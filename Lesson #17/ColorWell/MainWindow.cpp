@@ -4,6 +4,7 @@
 #include <Menu.h>
 #include <MenuItem.h>
 #include <View.h>
+#include <MenuBar.h>
 
 #include "ColorWell1.h"
 
@@ -37,8 +38,8 @@ MainWindow::MainWindow(void)
 	
 	background->AddChild(fColorWell);
 	
-	BMenu *menu = new BMenu("color");
-	fMenuBar->AddChild(menu);
+	BMenu *menu = new BMenu("Color");
+	fMenuBar->AddItem(menu);
 	
 	BMessage *msg = new BMessage(M_SET_COLOR);
 	msg->AddInt8("red", 160);
